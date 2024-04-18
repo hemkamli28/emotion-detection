@@ -1,0 +1,5 @@
+# Ignore virtual environment
+venv/
+/backend/venv/
+
+# Ignore other files and folders as needed

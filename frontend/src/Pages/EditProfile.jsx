@@ -25,7 +25,7 @@ const EditProfile = () => {
     const fetchData = async () => {
         try {
             const id = localStorage.getItem("id");
-            const response = await fetch(`http://localhost:8000/api/profile/${id}`, {
+            const response = await fetch(`https://emosense-3rnk.onrender.com/api/profile/${id}`, {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/json',
@@ -99,7 +99,7 @@ const handleUpdate = async () => {
     }
     try {
         const id = localStorage.getItem("id");
-        const response = await fetch(`http://localhost:8000/api/editProfile/${id}`, {
+        const response = await fetch(`https://emosense-3rnk.onrender.com/api/editProfile/${id}`, {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',

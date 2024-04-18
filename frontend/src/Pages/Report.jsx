@@ -14,7 +14,7 @@ const [imageData, setImageData] = useState([]);
     const fetchData = async () => {
         try {
           const id = localStorage.getItem("id");
-          const response = await axios.get(`http://localhost:8000/api/emotionHistory/${id}`);
+          const response = await axios.get(`https://emosense-3rnk.onrender.com/api/emotionHistory/${id}`);
           const data = await response
           console.log(data);
           setImageData(data?.data);

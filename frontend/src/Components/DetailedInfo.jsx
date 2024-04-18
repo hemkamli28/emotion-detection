@@ -14,7 +14,7 @@ const DetailedInfo = () => {
         setLoading(true);
         try {
             const id = window.location.pathname.split("/").pop();
-            const response = await axios.get(`http://localhost:8000/api/emotion/${id}`);
+            const response = await axios.get(`https://emosense-3rnk.onrender.com/api/emotion/${id}`);
             // Normalize the data to be between 0 and 1
             const normalizedData = response.data.prediction[0].map(value => value < 0 ? 0 : (value > 1 ? 1 : value));
             setEmotionData({ ...response.data, prediction: [normalizedData] });

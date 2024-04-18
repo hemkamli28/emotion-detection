@@ -45,7 +45,7 @@ const Signup = () => {
     formDataToSend.append('gender', formData.gender);   
     formDataToSend.append('phone', formData.phone);   
     try {
-        const response = await fetch('http://localhost:8000/api/signup/', {
+        const response = await fetch('https://emosense-3rnk.onrender.com/api/signup/', {
             method: 'POST',
             body: formDataToSend,
         });

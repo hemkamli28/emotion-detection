@@ -31,7 +31,7 @@ const Home = () => {
     const fetchData = async () => {
         try {
           const id = localStorage.getItem("id");
-          const response = await axios.get(`http://localhost:8000/api/emotionHistory/${id}`);
+          const response = await axios.get(`https://emosense-3rnk.onrender.com/api/emotionHistory/${id}`);
           const data = await response
           console.log(data);
           setEmotionData(data?.data)?.splice(0,3);
@@ -47,7 +47,7 @@ const Home = () => {
     const fetchResult = async (base64Image) => {
         setLoading(true);
         try {
-            const response = await axios.post('http://localhost:8000/api/model/', {
+            const response = await axios.post('https://emosense-3rnk.onrender.com/api/model/', {
                 image: base64Image ,user_id:localStorage.getItem("id")
             });
 
